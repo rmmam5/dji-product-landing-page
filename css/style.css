@@ -177,59 +177,103 @@ body {
 
 .two .content {
   display: flex;
-  max-width: 80%;
-  height: 30%;
-  gap: 15px;
+  flex-wrap: wrap;
+  max-width: 1250px;
+  width: 100%;
+  gap: 20px;
   justify-content: center;
-  border-radius: 15px;
   padding: 20px;
 }
 
 .two .content .cont {
-  width: 300px;
-  height: 400px;
+  width: 280px;
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
-  border: 1px solid gray;
-  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid #d1d5db;
+  padding: 16px;
   background-color: white;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.two .content .cont:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 .two .content .rate {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 26px;
+  left: 26px;
   background-color: #fcc100;
   color: #000;
-  padding: 2px 6px;
+  font-weight: 600;
+  padding: 4px 10px;
   z-index: 10;
-  border-radius: 10px;
-  font-size: 14px;
+  border-radius: 8px;
+  font-size: 13px;
 }
 
 .two .content .cont img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 12px;
   transition: transform 0.3s ease;
 }
+
 .two .content .cont:hover img {
-  transform: scale(1.05);
+  transform: scale(1.04);
+}
+
+.two .content .cont > h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 14px 0 6px 0;
+}
+
+.two .content .cont > p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #64748b;
+  margin-bottom: 16px;
+  flex-grow: 1;
 }
 
 .two .content .cont .group {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 8px;
 }
+
+.two .content .cont .group h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
 .two .content .cont .group button {
   border: none;
   background-color: #8e52ff;
   color: white;
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.two .content .cont .group button:hover {
+  background-color: #7938ea;
+  transform: scale(1.02);
 }
 
 .two .view {
@@ -290,18 +334,24 @@ body {
 
 .three .left .stars {
   display: flex;
-  width: 110px;
-  height: 50px;
-  overflow: hidden;
-  padding: 10px;
-  background-color: white;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  margin: 5px 0;
 }
 
 .three .left .stars img {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   object-fit: cover;
-  margin-right: 2px;
+}
+
+.three .left .stars p {
+  margin: 0 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1;
 }
 
 .three .left .rate {
@@ -332,19 +382,19 @@ body {
   border-radius: 5px;
 }
 
-.fill five {
+.fill.five {
   width: 78%;
 }
-.fill four {
+.fill.four {
   width: 20%;
 }
-.fill three {
+.fill.three {
   width: 10%;
 }
-.fill two {
+.fill.two {
   width: 10%;
 }
-.fill one {
+.fill.one {
   width: 5%;
 }
 
@@ -411,17 +461,23 @@ body {
 
 .three .right .part .uppur .data .stars {
   display: flex;
-  width: 110px;
-  height: 50px;
-  overflow: hidden;
-  padding: 10px;
-  background-color: white;
+  align-items: center;
+  gap: 3px;
+  margin-top: 5px;
 }
 
 .three .right .part .uppur .data .stars img {
   width: 15px;
   height: 15px;
   object-fit: cover;
+}
+
+.three .right .part .uppur .data .stars p {
+  margin: 0 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1;
 }
 
 .three .right .part .uppur .verified {
